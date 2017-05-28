@@ -2,6 +2,9 @@
 
 <h1>Restaurants</h1>
 
+<% @restaurants = Restaurant.scope_by_cuisine("Mexican") %>
+
+
 <table>
   <thead>
     <tr>
@@ -39,12 +42,5 @@
 </table>
 
 <br>
-<button type="button" name="button"><%= @restaurant = Restaurant.scope_by_cuisine("Mexican") %> Cuisine </button>
-<!-- # <%= @restaurant = Restaurant.scope_by_cuisine("Mexican") %> -->
-<p><%= @restaurant = Restaurant.scope_by_cuisine("Mexican") %></p>
-<%= @restaurant = Restaurant.scope_by_city("Miami") %>
-<br>
-
-
 
 <%= link_to 'New Restaurant', new_restaurant_path %>

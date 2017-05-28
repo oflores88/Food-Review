@@ -4,8 +4,14 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
-    @restaurants = Restaurant.all
-    @restaurants = Restaurant.scope_by_city(params[:city]) if params[:city].present?
+    # @restaurants = Restaurant.all
+    # This loop below dries up the lines of code below it
+    # If we use this loop, we need to uncomment the method in the private section too
+    # filtering_params(params).each do |key,value|
+    #   @restaurants = @restaurants.public_send(key, value) if value.present?
+    # end
+    ## These are the scope methods being called if we don't use the above loop
+    # @restaurants = Restaurant.scope_by_city(params[:city]) if params[:city].present?
     @restaurants = Restaurant.scope_by_cuisine(params[:cuisine]) if params[:cuisine].present?
   end
 
@@ -64,7 +70,7 @@ class RestaurantsController < ApplicationController
   end
 
   # Learning how to format data to output on the HTML file
-
+  mexican = Restaurant.scope_by_cuisine("Mexican")
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -76,4 +82,9 @@ class RestaurantsController < ApplicationController
     def restaurant_params
       params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :phone, :cuisine, :website, :price)
     end
+
+    #This method goes with the scope method loop in the index method above
+    # def filtering_params(params)
+    #   params.slice(:city, :cuisine)
+    # end
 end
