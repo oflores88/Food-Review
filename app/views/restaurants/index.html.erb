@@ -2,8 +2,6 @@
 
 <h1>Restaurants</h1>
 
-<!-- <p>TEST<%#= restaurant.name %> TEST</p> -->
-
 <table>
   <thead>
     <tr>
@@ -15,6 +13,7 @@
       <th>Phone</th>
       <th>Website</th>
       <th>Price</th>
+      <th>Cuisine</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +29,7 @@
         <td><%= restaurant.phone %></td>
         <td><%= restaurant.website %></td>
         <td><%= restaurant.price %></td>
+        <td><%= restuarant.cuisine %></td>
         <td><%= link_to 'Show', restaurant %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
         <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
