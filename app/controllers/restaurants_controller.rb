@@ -5,6 +5,8 @@ class RestaurantsController < ApplicationController
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
+    @restaurants = Restaurant.scope_by_city(params[:city]) if params[:city].present?
+    @restaurants = Restaurant.scope_by_cuisine(params[:cuisine]) if params[:cuisine].present?
   end
 
   # GET /restaurants/1
