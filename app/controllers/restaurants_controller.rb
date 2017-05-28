@@ -5,6 +5,8 @@ class RestaurantsController < ApplicationController
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
+    @restaurants = Restaurant.scope_by_city(params[:city]) if params[:city].present?
+    @restaurants = Restaurant.scope_by_cuisine(params[:cuisine]) if params[:cuisine].present?
   end
 
   # GET /restaurants/1
@@ -61,6 +63,9 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  # Learning how to format data to output on the HTML file
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant
@@ -69,6 +74,6 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :address, :phone, :website, :price)
+      params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :phone, :cuisine, :website, :price)
     end
 end

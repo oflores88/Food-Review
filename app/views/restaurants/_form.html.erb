@@ -22,6 +22,21 @@
   </div>
 
   <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :restaurant_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :restaurant_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :restaurant_zip %>
+  </div>
+
+  <div class="field">
     <%= form.label :phone %>
     <%= form.text_field :phone, id: :restaurant_phone %>
   </div>
@@ -34,6 +49,11 @@
   <div class="field">
     <%= form.label :price %>
     <%= form.text_field :price, id: :restaurant_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cuisine %>
+    <%= form.text_field :cuisine, id: :restaurant_cuisine %>
   </div>
 
   <div class="actions">
