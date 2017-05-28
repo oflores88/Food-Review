@@ -21,8 +21,18 @@
 </p>
 
 <p>
+  <strong>Email Confirmation:</strong>
+  <%= @user.email_confirmation %>
+</p>
+
+<p>
   <strong>Password:</strong>
   <%= @user.password %>
+</p>
+
+<p>
+  <strong>Password Confirmation:</strong>
+  <%= @user.password_confirmation %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

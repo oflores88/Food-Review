@@ -78,3 +78,17 @@ div.actions {
 label {
   display: block;
 }
+
+/* forms */
+/*Everything below added by Shannan from the railstutorial.org book on setting up log-in pages*/
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 70%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
