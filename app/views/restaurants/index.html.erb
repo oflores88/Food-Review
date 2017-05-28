@@ -2,11 +2,16 @@
 
 <h1>Restaurants</h1>
 
+<!-- <p>TEST<%#= restaurant.name %> TEST</p> -->
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
       <th>Phone</th>
       <th>Website</th>
       <th>Price</th>
@@ -19,6 +24,9 @@
       <tr>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.address %></td>
+        <td><%= restaurant.city %></td>
+        <td><%= restaurant.state %></td>
+        <td><%= restaurant.zip %></td>
         <td><%= restaurant.phone %></td>
         <td><%= restaurant.website %></td>
         <td><%= restaurant.price %></td>
