@@ -48,8 +48,8 @@
 <p>
   <h3>Reviews</h3>
   <h4>Total Reviews: <%= @restaurant.reviews.count %></h4>
+  <h4>Average Score: <%= @restaurant.reviews.average(:score) %></h4>
 <ul>
-
   <% @restaurant.reviews.each do |review| %>
 <li><%= review.review %></li>
   <% end %>
