@@ -2,12 +2,18 @@
 
 <h1>Reviews</h1>
 
+<p> Total Reviews: <%= Review.count %></p>
+
+<h3>Most Popular Restaurants</h3>
+<p>Insert code to be able to scope reviews by average score for each
+restaurant and post them in order of highest score to lowest score</p>
+
 <table>
   <thead>
     <tr>
       <th>Score</th>
       <th>Review</th>
-      <th>User</th>
+      <th>User Name</th>
       <th>Restaurant</th>
       <th colspan="3"></th>
     </tr>
@@ -18,8 +24,8 @@
       <tr>
         <td><%= review.score %></td>
         <td><%= review.review %></td>
-        <td><%= review.user %></td>
-        <td><%= review.restaurant %></td>
+        <td><%= review.user.user_name %></td>
+        <td><%= review.restaurant.name %></td>
         <td><%= link_to 'Show', review %></td>
         <td><%= link_to 'Edit', edit_review_path(review) %></td>
         <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
