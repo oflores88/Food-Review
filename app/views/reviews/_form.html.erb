@@ -22,13 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name, id: :review_user_name %>
+    <% form.label :user_id %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="field">
-    <%= form.label :restaurant_name %>
-    <%= form.text_field :restaurant_name, id: :review_restaurant_name %>
+    <% form.label :restaurant_id %>
+    <%= form.hidden_field :restaurant_id, value: params["restaurant_id"] %>
   </div>
 
   <div class="actions">
