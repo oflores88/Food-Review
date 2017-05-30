@@ -12,30 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :user_first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :user_last_name %>
-  </div>
-
-  <div class="field">
     <%= form.label :user_name %>
     <%= form.text_field :user_name, id: :user_user_name %>
   </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :user_email %>
-  </div>
-
-<!-- Do we need an e-mail confirmation step to prevent users from messing up their e-mail? -->
-  <div class="field">
-    <%= form.label :email_confirmation, "E-Mail Confirmation" %>
-    <%= form.text_field :email_confirmation %>
-    </div>
 
   <div class="field">
     <%= form.label :password %>
@@ -49,6 +28,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Create my account", class: "btn btn-primary" %>
+    <%= form.submit "Login", class: "btn btn-primary" %>
   </div>
 <% end %>

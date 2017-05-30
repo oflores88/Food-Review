@@ -12,12 +12,15 @@ class RestaurantsController < ApplicationController
     # end
     ## These are the scope methods being called if we don't use the above loop
     # @restaurants = Restaurant.scope_by_city(params[:city]) if params[:city].present?
-    @restaurants = Restaurant.scope_by_cuisine(params[:cuisine]) if params[:cuisine].present?
+    # @restaurants = Restaurant.scope_by_cuisine(params[:cuisine]) if params[:cuisine].present?
+    @restaurants = Restaurant.scope_by_cuisine("mexican")
   end
 
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
+    @reviews = Review.where(restaurant_id: params[:id])
+    @average_score = @reviews.average(:score).to_i
   end
 
   # GET /restaurants/new

@@ -50,8 +50,8 @@
   <h4>Total Reviews: <%= @restaurant.reviews.count %></h4>
   <h4>Average Score: <%= @restaurant.reviews.average(:score) %></h4>
 <ul>
-  <% @restaurant.reviews.each do |review| %>
-<li><%= review.review %></li>
+  <% @reviews.each do |review| %>
+  <li><%= "#{review.user.user_name} - #{review.review}" %></li>
   <% end %>
 
 </ul>
@@ -60,3 +60,4 @@
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
+<%= link_to 'Add Review', new_review_path(restaurant_id: @restaurant)  %>
