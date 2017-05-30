@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   # GET /reviews/1/edit

@@ -32,7 +32,7 @@
 
 <p>
   <strong>Password Confirmation:</strong>
-  <%= @user.password_confirmation %>
+  <%= @user.password_digest %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
