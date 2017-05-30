@@ -2,20 +2,11 @@
 
 <h1>Restaurants</h1>
 
-<!-- We need to figure out how to make a scope button or way
-select restaurants to show by city or cuisine only  -->
-
-
-
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Phone</th>
       <th>Website</th>
       <th>Price</th>
       <th>Cuisine</th>
@@ -28,18 +19,10 @@ select restaurants to show by city or cuisine only  -->
       <tr>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.address %></td>
-        <td><%= restaurant.city %></td>
-        <td><%= restaurant.state %></td>
-        <td><%= restaurant.zip %></td>
-        <td><%= restaurant.phone %></td>
         <td><%= restaurant.website %></td>
         <td><%= restaurant.price %></td>
-        <td><%= restaurant.cuisine %></td>
+        <td><%= restaurant.cuisine.capitalize %></td>
         <td><%= link_to 'Show', restaurant %></td>
-        <% if current_user %>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -47,4 +30,4 @@ select restaurants to show by city or cuisine only  -->
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'Add Restaurant', new_restaurant_path %>

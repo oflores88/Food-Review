@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
-    # @restaurants = Restaurant.all
+    @restaurants = Restaurant.all
     # This loop below dries up the lines of code below it
     # If we use this loop, we need to uncomment the method in the private section too
     # filtering_params(params).each do |key,value|
@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
     ## These are the scope methods being called if we don't use the above loop
     # @restaurants = Restaurant.scope_by_city(params[:city]) if params[:city].present?
     # @restaurants = Restaurant.scope_by_cuisine(params[:cuisine]) if params[:cuisine].present?
-    @restaurants = Restaurant.scope_by_cuisine("mexican")
+    # @restaurants = Restaurant.scope_by_cuisine("mexican")
   end
 
   # GET /restaurants/1

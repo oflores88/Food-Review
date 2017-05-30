@@ -42,7 +42,7 @@
 
 <p>
   <strong>Cuisine:</strong>
-  <%= @restaurant.cuisine %>
+  <%= @restaurant.cuisine.capitalize %>
 </p>
 
 <p>
@@ -57,7 +57,5 @@
 </ul>
 </p>
 
-
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
 <%= link_to 'Add Review', new_review_path(restaurant_id: @restaurant)  %>
