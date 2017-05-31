@@ -18,6 +18,7 @@ html {
 #jumbo {
   background-image: url('wyneats.jpg');
   background-size: cover;
+  min-height: 400px;
 }
 #table {
   background-color: gray;
@@ -31,11 +32,15 @@ html {
 }
 #item {
   border: 1px solid lightgray;
+  border-radius: 5px;
   padding: 10px;
   background-color: white;
   text-align: center;
   width: 75%;
   margin: 10px auto;
+}
+#bs-example-navbar-collapse-1 {
+  margin-top: 12px;
 }
 #header {
   text-align: center;
@@ -46,16 +51,19 @@ html {
 }
 #reviewform {
   text-align: center;
+  border-radius: 5px;
 }
 #login {
   text-align: center;
   color: white;
+  border-radius: 5px;
 }
 #back {
   text-align: center;
 }
 #show {
   border: 1px solid lightgray;
+  border-radius: 5px;
   padding: 10px;
   background-color: white;
   text-align: center;
@@ -63,14 +71,19 @@ html {
   margin: 10px auto;
 }
 #review {
-  border: 1px solid lightgray;
+   border: 1px solid lightgray;
+   border-radius: 5px;
   padding: 10px;
   background-color: white;
   text-align: center;
   width: 75%;
   margin: 10px auto;
 }
+#counter {
+  text-align: center;
+}
 h1 {
+  font-family: 'Permanent Marker', cursive;
   text-align: center;
   color: white;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
@@ -78,12 +91,12 @@ h1 {
                 0px 18px 23px rgba(0,0,0,0.1);
 }
 body {
+   font-family: 'Nixie One', cursive;
    /*background-image: url("background.jpg");*/
-   background-color: #a6342c;
+   background-color: #AD513A;
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-   font-family: 'Lato', sans-serif;
  }
 
 #content h1 {

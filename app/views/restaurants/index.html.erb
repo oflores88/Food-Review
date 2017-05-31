@@ -28,6 +28,29 @@
   </tbody>
 </table>
 
+</div>
+
+<%= link_to 'Add Restaurant', new_restaurant_path %>
+ -->
+
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+    </a>
+  </div>
+  <div class="media-body">
+  <% @restaurants.each do |restaurant| %>
+    <div id="item">
+    <h4 class="media-heading"><%= restaurant.name %></h4>
+    <p>Address: <%= restaurant.address %></p>
+    <p>Website: <%= link_to restaurant.website, "http://www.#{restaurant.website}" %></p>
+    <p><%= restaurant.price %> <%= restaurant.cuisine.capitalize %></p>
+    <%= link_to 'Show', restaurant %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
 <br>
 
 <%= link_to 'Add Restaurant', new_restaurant_path %>
