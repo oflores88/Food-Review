@@ -11,23 +11,29 @@
     </div>
   <% end %>
 
+<div id="reviewform">
+
   <div class="field">
     <%= form.label :score %>
-    <%= form.number_field :score, id: :review_score %>
+    <br>
+    <%= form.number_field :score, id: :review_score, class: "blacktext" %>
   </div>
 
   <div class="field">
     <%= form.label :review %>
-    <%= form.text_area :review, id: :review_review %>
+    <br>
+    <%= form.text_area :review, id: :review_review, rows: "10", cols: "50", class: "blacktext" %>
   </div>
 
   <div class="field">
     <% form.label :user_id %>
+    <br>
     <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="field">
     <% form.label :restaurant_id %>
+    <br>
     <%= form.hidden_field :restaurant_id, value: params["restaurant_id"] %>
   </div>
 
@@ -35,3 +41,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
