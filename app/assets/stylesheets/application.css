@@ -5,10 +5,16 @@ html {
  }
 .stats {
   color:white;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.5),
+                8px 8px 13px rgba(0,0,0,0.2),
+                0px 18px 23px rgba(0,0,0,0.2);
 }
 .media-heading {
   border-bottom: 1px solid lightgray;
 }
+
 #jumbo {
   background-image: url('background.jpg');
   background-size: cover;
@@ -20,8 +26,8 @@ html {
 #rest_table {
   background-color: white;
   margin-left: auto;
- margin-right: auto;
- text-align: center;
+  margin-right: auto;
+  text-align: center;
 }
 #item {
   border: 1px solid lightgray;
@@ -57,7 +63,7 @@ html {
   margin: 10px auto;
 }
 #review {
-   border: 1px solid lightgray;
+  border: 1px solid lightgray;
   padding: 10px;
   background-color: white;
   text-align: center;
@@ -108,7 +114,7 @@ hr {
  .login {
   margin: 2px;
  }
- 
+
  .btn {
   margin: 10px;
  }

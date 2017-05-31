@@ -20,7 +20,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1.json
   def show
     @reviews = Review.where(restaurant_id: params[:id])
-    @average_score = @reviews.average(:score).to_i
+    @average_score = @reviews.average(:score).to_f.round(2)
   end
 
   # GET /restaurants/new

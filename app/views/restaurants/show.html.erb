@@ -38,7 +38,7 @@
     <h3>Reviews</h3>
     <h4>Total Reviews: <%= @restaurant.reviews.count %></h4>
     <h4>Average Score: <%= @restaurant.reviews.average(:score) %></h4>
-    <button class="btn btn-default btn-lg"><i class="fa fa-thumbs-up" aria-hidden="true"></i><%= link_to 'Add Review', new_review_path(restaurant_id: @restaurant)  %></button> 
+    <button class="btn btn-default btn-lg"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= link_to 'Add Review', new_review_path(restaurant_id: @restaurant)  %></button>
     </div>
     <% @reviews.each do |review| %>
     <div id="review">
@@ -48,7 +48,3 @@
   </p>
 
 <button id="back" class="btn btn-default btn-lg"><%= link_to 'Back', restaurants_path %></button>
-
-
-
-
