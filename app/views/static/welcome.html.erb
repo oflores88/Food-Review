@@ -1,8 +1,21 @@
-<h1>Welcome to WynEats!</h1>
+<!--Jumbotron -->
+    <div class="container" id="jumbo">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="content">
+            <h1>Welcome to WynEats!</h1>
+              <hr>
+              <p class="stats">Total Restaurants to Choose From: <%= Restaurant.count %></p>
+              <p class="stats">Total Reviews to Help You Choose: <%= Review.count %></p>
+            <div>
+              <a href="http://localhost:3000/restaurants" target="_self"><button class="btn btn-default btn-lg"><i class="fa fa-cutlery" aria-hidden="true"></i> Go to Restaurants</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
 
-<h5>Total Restaurants to Choose From: <%= Restaurant.count %></h5>
-<a href="/restaurants">Go to Restaurants</a>
 
-<h5>Total Reviews to Help You Choose: <%= Review.count %></h5>
 
-<%= link_to 'Add Restaurant', new_restaurant_path %>

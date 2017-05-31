@@ -1,61 +1,54 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<div>
+<h1>
+  <strong></strong>
   <%= @restaurant.name %>
-</p>
+</h1>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+<div id="show">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>City:</strong>
-  <%= @restaurant.city %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @restaurant.address %> <%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zip %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @restaurant.state %>
-</p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @restaurant.zip %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @restaurant.phone %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @restaurant.phone %>
-</p>
+  <p>
+    <strong>Website:</strong>
+    <%= link_to @restaurant.website, "http://www.#{@restaurant.website}" %>
+  </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @restaurant.website %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @restaurant.price %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @restaurant.price %>
-</p>
+  <p>
+    <strong>Cuisine:</strong>
+    <%= @restaurant.cuisine.capitalize %>
+  </p>
 
-<p>
-  <strong>Cuisine:</strong>
-  <%= @restaurant.cuisine.capitalize %>
-</p>
+  <p>
+    <h3>Reviews</h3>
+    <h4>Total Reviews: <%= @restaurant.reviews.count %></h4>
+    <h4>Average Score: <%= @restaurant.reviews.average(:score) %></h4>
+    <button class="btn btn-default btn-lg"><i class="fa fa-thumbs-up" aria-hidden="true"></i><%= link_to 'Add Review', new_review_path(restaurant_id: @restaurant)  %></button> 
+    </div>
+    <% @reviews.each do |review| %>
+    <div id="review">
+      <%= "#{review.user.user_name} - #{review.review}" %>
+    </div>
+    <% end %>
+  </p>
 
-<p>
-  <h3>Reviews</h3>
-  <h4>Total Reviews: <%= @restaurant.reviews.count %></h4>
-  <h4>Average Score: <%= @restaurant.reviews.average(:score) %></h4>
-<ul>
-  <% @reviews.each do |review| %>
-  <li><%= "#{review.user.user_name} - #{review.review}" %></li>
-  <% end %>
+<button id="back" class="btn btn-default btn-lg"><%= link_to 'Back', restaurants_path %></button>
 
-</ul>
-</p>
 
-<%= link_to 'Back', restaurants_path %>
-<%= link_to 'Add Review', new_review_path(restaurant_id: @restaurant)  %>
+
+

@@ -1,15 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Restaurants</h1>
 
+<!-- <div id="table">
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Address</th>
-      <th>Website</th>
-      <th>Price</th>
-      <th>Cuisine</th>
+      <th class="theader">Address</th>
+      <th class="theader">Website</th>
+      <th class="theader">Price</th>
+      <th class="theader">Cuisine</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,17 +16,38 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.website %></td>
-        <td><%= restaurant.price %></td>
-        <td><%= restaurant.cuisine.capitalize %></td>
-        <td><%= link_to 'Show', restaurant %></td>
+        <td class="tdata"><%= restaurant.name %></td>
+        <td class="tdata"><%= restaurant.address %></td>
+        <td class="tdata"><%= restaurant.website %></td>
+        <td class="tdata"><%= restaurant.price %></td>
+        <td class="tdata"><%= restaurant.cuisine.capitalize %></td>
+        <td class="tdata"><%= link_to 'Show', restaurant %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
+</div>
 
 <%= link_to 'Add Restaurant', new_restaurant_path %>
+ -->
+
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+  <% @restaurants.each do |restaurant| %>
+    <div id="item">
+    <h4 class="media-heading"><%= restaurant.name %></h4>
+    <p>Address: <%= restaurant.address %></p>
+    <p>Website: <%= link_to restaurant.website, "http://www.#{restaurant.website}" %></p>
+    <p><%= restaurant.price %> <%= restaurant.cuisine.capitalize %></p>
+    <%= link_to 'Show', restaurant %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+

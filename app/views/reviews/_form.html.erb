@@ -10,15 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+<div id="reviewform">
   <div class="field">
     <%= form.label :score %>
+    <br>
     <%= form.number_field :score, id: :review_score %>
   </div>
 
   <div class="field">
     <%= form.label :review %>
-    <%= form.text_area :review, id: :review_review %>
+    <br>
+    <%= form.text_area :review, id: :review_review, rows: "10", cols: "50" %>
   </div>
 
   <div class="field">
@@ -35,3 +37,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
