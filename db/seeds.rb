@@ -68,9 +68,9 @@ Restaurant.create!([
 
 ])
 Review.create!([
-  {score: 4, review: "Great Tacos", user_id: 1, restaurant_id: 1},
-  {score: 3, review: "The food is pretty good and you can make it during your lunch break if you walk & eat fast.", user_id: 2, restaurant_id: 1},
-  {score: 5, review: "Good enough but not the best tacos. Gets crowded on rainy days. Order ahead if you really want to save time.", user_id: 3, restaurant_id: 1},
+  {score: 5, review: "The tacos here are awesome! You Order ahead or have your lunch delivered through GrubHub.", user_id: 4, restaurant_id: 1},
+  {score: 4, review: "The food is pretty good and you can make it during your lunch break if you walk & eat fast.", user_id: 8, restaurant_id: 1},
+  {score: 5, review: "I really liked their guacamole and they have decent healthy options. But it gets crowded on rainy days. Order ahead if you really want to save time.", user_id: 10, restaurant_id: 1},
   {score: 3, review: "Meh...it's okay but not great.", user_id: 1, restaurant_id: 2},
   {score: 2, review: "I've had better coffee, but it's an easy walk from Wynbase.", user_id: 2, restaurant_id: 2},
   {score: 5, review: "OMG- I LOVE THIS PLACE! The food is phenomenal and their Miamchiatto is the bomb!", user_id: 3, restaurant_id: 2},
